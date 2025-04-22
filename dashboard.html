@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Usage Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-page">
+  <header>
+    <h1>📊 Phone Usage Dashboard</h1>
+  </header>
+  <main>
+    <div class="averages">
+      <p><strong>Average Mobile Usage:</strong> <span id="avgMobile"></span> million</p>
+      <p><strong>Average Internet Usage:</strong> <span id="avgInternet"></span> million</p>
+      <p><strong>Average Display Time:</strong> <span id="avgDisplayTime"></span> hours/day</p>
+      <p><strong>Average Data Usage:</strong> <span id="avgDataUsage"></span> GB/month</p>
+    </div>
+    <div class="charts">
+      <canvas id="barChart"></canvas>
+      <canvas id="lineChart"></canvas>
+      <canvas id="pieChart" class="small-chart"></canvas>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* WELCOME PAGE STYLES */
+  .welcome-page {
+    background: linear-gradient(135deg, #7f53ac, #647dee);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes bubble {
+    0% { transform: translateY(0) scale(1); opacity: 0.5; }
+    100% { transform: translateY(-1000px) scale(0.5); opacity: 0; }
+  }
+  
+  .bubbles span {
+    position: absolute;
+    bottom: -50px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: bubble 15s linear infinite;
+    left: calc(var(--i) * 10%);
+    animation-delay: calc(var(--i) * 0.3s);
+  }
+  
+  .welcome-container {
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .welcome-heading {
+    font-size: 2.5rem;
+    animation: bounceIn 1s ease;
+  }
+  
+  .welcome-subtext {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease;
+  }
+  
+  .submit-btn {
+    background: #f7971e;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: bounceIn 1.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background: #f76b1c;
+    transform: scale(1.1);
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Typewriter effect */
+  .typewriter {
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .05em;
+    animation:
+      typing 3s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+  
+  /* DASHBOARD PAGE STYLES */
+  .dashboard-page {
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    animation: fadeIn 1s ease;
+  }
+  
+  header {
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .averages {
+    font-size: 1.2rem;
+    background: linear-gradient(to left, #fdfbfb, #ebedee);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    animation: slideUp 0.6s ease;
+    width: 80%;
+    max-width: 600px;
+    color: #222;
+  }
+  
+  .charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  canvas {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    animation: slideUp 0.8s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  
+  .small-chart {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
